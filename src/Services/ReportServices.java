@@ -1,6 +1,7 @@
 package Services;
 
 import java.sql.SQLException;
+import java.util.HashMap;
 
 import net.sf.jasperreports.engine.JRException;
 import net.sf.jasperreports.engine.JasperFillManager;
@@ -53,6 +54,21 @@ public class ReportServices {
 		}
 	}
 	
-	
+	public void CargarReporteSolicitud(String chain_h) throws SQLException, JRException{
+		
+			   
+		 HashMap<String, Object> myParameters = new HashMap<String, Object>();
+		  
+	      myParameters.put("chain_h", chain_h);
+	 
+		     
+		  
+		JasperPrint print = JasperFillManager.fillReport("src/Reports/SituacionCarro.jasper", myParameters, ServicesLocator.getConnection());
+		    
+		   JasperViewer view = new JasperViewer(print, false);
+		    
+		   view.setVisible(true);
+		   }
+	}
 
-}
+

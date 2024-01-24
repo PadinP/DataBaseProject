@@ -550,6 +550,8 @@ public class IntSolicitud extends JDialog {
 								Group_Tour group_Tour = new Group_Tour(codGroup, country, numTourist);
 								Group_TourServices.insertarGrupo(group_Tour);
 								id4 = Group_TourServices.mostrarGrupo().getLast().getId_group();
+
+								System.out.println(id4+"id grupo");
 							}
 
 						} catch (ClassNotFoundException | SQLException e) {
