@@ -64,6 +64,7 @@ import javax.swing.JScrollPane;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.time.LocalTime;
 import java.sql.Time;
 
 public class IntSolicitud extends JDialog {
@@ -488,6 +489,7 @@ public class IntSolicitud extends JDialog {
 								+ ":"
 								+ spinnerMinutes.getValue().toString() + ":00");
 
+							
 						//Date_d tiempo1 = new Date_d(dateChooser.getDate()); // variable que recibe la fecha selecionada por el usuario
 						//tiempo1.setId_date(dateChooser.getDate());
 						Date_d dAux2 = new Date_d(dateChooser.getDate(), valueHour);
